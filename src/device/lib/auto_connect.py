@@ -72,8 +72,8 @@ def con_test():
         print("JSON file error.")
         return False
     except:
-        print("Unexpected error:", exc_info()[0])
-        raise
+        raise("Unexpected error:", exc_info()[0])
+  
  
     try:
         file = open(cred_file, "w")
@@ -84,6 +84,6 @@ def con_test():
         print("I/O error({0}): {1}".format(e.errno, e.strerror))
         return False
     except:
-        print("Unexpected error:", exc_info()[0])
-        raise
+        raise("Unexpected error:", exc_info()[0])
+        
     print("Credential was successfully deleted.")
