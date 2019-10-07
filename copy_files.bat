@@ -3,8 +3,7 @@ ampy --port %ESP_PORT% put src/device/main.py
 ampy --port %ESP_PORT% put src/device/requirements.txt
 ampy --port %ESP_PORT% mkdir lib
 ampy --port %ESP_PORT% put src/device/lib/auto_connect.py lib/auto_connect.py
-ampy --port %ESP_PORT% put src/device/lib/uftpserver.py lib/uftpserver.py
-ampy --port %ESP_PORT% put src/device/lib/uftpserver.py lib/uftpserver.py
+ampy --port %ESP_PORT% put src/device/lib/ftp.py lib/ftp.py
 ampy --port %ESP_PORT% put src/device/lib/urequests.py lib/urequests.py
 ampy --port %ESP_PORT% put src/device/lib/pkg_resources.py lib/pkg_resources.py
 ampy --port %ESP_PORT% put src/device/lib/upip.py lib/upip.py

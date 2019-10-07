@@ -55,24 +55,24 @@ def con_test():
     return False
   return True
   
- def delete_cred(name, cred_file = "cred.json"):
-    try:
-        file = open(cred_file, "r")
-        cred_data = file.read()
-        dict_cred = loads(cred_data)
-        del dict_cred[name]
-        file.close()
-    except IOError as e:
-        print("I/O error({0}): {1}".format(e.errno, e.strerror))
-        return False
-    except KeyError:
-        print("Name is not in credentials...")
-        return False
-    except ValueError:
-        print("JSON file error.")
-        return False
-    except:
-        raise("Unexpected error:", exc_info()[0])
+def delete_cred(name, cred_file = "cred.json"):
+  try:
+    file = open(cred_file, "r")
+    cred_data = file.read()
+    dict_cred = loads(cred_data)
+    del dict_cred[name]
+    file.close()
+  except IOError as e:
+    print("I/O error({0}): {1}".format(e.errno, e.strerror))
+    return False
+  except KeyError:
+    print("Name is not in credentials...")
+    return False
+  except ValueError:
+    print("JSON file error.")
+    return False
+  except:
+    raise("Unexpected error:", exc_info()[0])
   
  
     try:
