@@ -4,8 +4,8 @@ try:
   import time
   import auto_connect
   #import uftpserver
-  import ftp
-  import _thread
+  #import ftp
+  #import _thread
 
   auto_connect.auto_connect()
   time.sleep(10)
@@ -14,7 +14,7 @@ try:
   else:
     print("WIFI KO!")
 
-  ftp_thread = _thread.start_new_thread(ftp.ftpserver, (True,))
+  #ftp_thread = _thread.start_new_thread(ftp.ftpserver, (True,))
 except Exception as e:
   print("Unhandled exception:%s" % (str(e),))
   print("Boot encountered. Restarting in 10s")

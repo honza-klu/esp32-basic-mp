@@ -1,6 +1,9 @@
 ampy --port %ESP_PORT% put src/device/boot.py
 ampy --port %ESP_PORT% put src/device/main.py
 ampy --port %ESP_PORT% put src/device/requirements.txt
+ampy --port %ESP_PORT% put src/device/ssl_http_server.py
+ampy --port %ESP_PORT% put src/device/priv.key
+ampy --port %ESP_PORT% put src/device/cert.txt
 ampy --port %ESP_PORT% mkdir lib
 ampy --port %ESP_PORT% put src/device/lib/auto_connect.py lib/auto_connect.py
 ampy --port %ESP_PORT% put src/device/lib/ftp.py lib/ftp.py
